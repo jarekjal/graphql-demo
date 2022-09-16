@@ -1,0 +1,14 @@
+# All available queries on this graphql server
+type Query {
+    bankAccount(id: ID): BankAccount
+    allBankAccounts: [BankAccount]
+}
+
+type Mutation {
+    createBankAccount(bankAccount: BankAccountInput!): BankAccount
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
