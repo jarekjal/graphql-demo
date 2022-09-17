@@ -1,11 +1,11 @@
 type BankAccount {
     id: ID!
-    name: String!
+    client: Client!
     currency: Currency!
 }
 
 input BankAccountInput {
     id: ID!
-    name: String!
+    client: ClientInput!
     currency: Currency!
 }

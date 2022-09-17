@@ -1,0 +1,17 @@
+# Client data
+type Client{
+    firstName: String!
+    lastName: String!
+    phone: String
+    email: String
+    
+}
+
+input ClientInput {
+    firstName: String!
+    lastName: String!
+    phone: String
+    email: String
+
+}
+
