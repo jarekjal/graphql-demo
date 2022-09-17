@@ -4,6 +4,7 @@ type Client{
     lastName: String!
     phone: String
     email: String
+    dateOfBirth: String!
     
 }
 
@@ -12,6 +13,7 @@ input ClientInput {
     lastName: String!
     phone: String
     email: String
+    dateOfBirth: String!
 
 }
 

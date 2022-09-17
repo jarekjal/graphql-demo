@@ -6,4 +6,13 @@ graphql:
     schema-location-pattern: "**/*.graphqls"
   playground:
     enabled: true
+    tabs:
+      - name: Get all bank accounts
+        query: classpath:playground/allBankAccounts.graphql
+      - name: Get bank account for Id
+        query: classpath:playground/bankAccountForId.graphql
+        variables: classpath:playground/bankAccountForId_variables.json
+      - name: Create Zofia Ogórek
+        query: classpath:playground/createZofiaOgorek.graphql
+
 

@@ -1,0 +1,24 @@
+mutation {
+    createBankAccount(
+        bankAccount: {
+            id: "89b37de2-ae35-44a4-9c66-3529d164a9db"
+            client: {
+                firstName: "Zofia"
+                lastName: "Ogórek"
+                phone: "+48509876123"
+                email: "zofia.ogorek@email.com"
+            }
+            currency: USD
+        }
+    ) {
+        id
+        client {
+            firstName
+            lastName
+            phone
+            email
+        }
+        currency
+        __typename
+    }
+}

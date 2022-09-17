@@ -8,7 +8,10 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 @Component
 public class InMemoryRepository {
@@ -17,7 +20,7 @@ public class InMemoryRepository {
 
     @PostConstruct
     @SneakyThrows
-    private void initDefaultData(){
+    private void initDefaultData() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         UUID uuid1 = UUID.fromString("8cfaad39-af7c-3f32-9944-0243ad7d63e7");
         BankAccount bankAccount1 = BankAccount.builder()
@@ -46,15 +49,15 @@ public class InMemoryRepository {
         bankAccountMap.put(uuid2, bankAccount2);
     }
 
-    public void upsertBankAccount(BankAccount bankAccount){
+    public void upsertBankAccount(BankAccount bankAccount) {
         bankAccountMap.put(bankAccount.getId(), bankAccount);
     }
 
-    public BankAccount getBankAccountById(UUID id){
+    public BankAccount getBankAccountById(UUID id) {
         return bankAccountMap.get(id);
     }
 
-    public Collection<BankAccount> getAllBankAccounts(){
+    public Collection<BankAccount> getAllBankAccounts() {
         return bankAccountMap.values();
     }
 }

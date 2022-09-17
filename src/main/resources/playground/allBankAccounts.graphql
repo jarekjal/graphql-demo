@@ -1,0 +1,13 @@
+query GET_ALL_BANK_ACCOUNTS {
+    allBankAccounts{
+        id
+        client{
+            firstName
+            lastName
+            #email
+            phone
+        }
+        currency
+        __typename
+    }
+}
