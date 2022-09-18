@@ -2,10 +2,12 @@ type BankAccount {
     id: ID!
     client: Client!
     currency: Currency!
+    opened: Date!
 }
 
 input BankAccountInput {
     id: ID!
     client: ClientInput!
     currency: Currency!
+    opened: Date!
 }

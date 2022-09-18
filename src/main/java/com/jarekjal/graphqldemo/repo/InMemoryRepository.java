@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +36,7 @@ public class InMemoryRepository {
                         .dateOfBirth(sdf.parse("1980-04-10"))
                         .build())
                 .currency(Currency.USD)
+                .opened(LocalDate.of(2020, 1, 3))
                 .build();
         bankAccountMap.put(uuid1, bankAccount1);
         UUID uuid2 = UUID.fromString("6db1b7ec-f093-3665-8297-4b8a02b16b99");
@@ -45,8 +49,10 @@ public class InMemoryRepository {
                         .dateOfBirth(sdf.parse("1983-05-17"))
                         .build())
                 .currency(Currency.CHF)
+                .opened(LocalDate.of(2022,8, 30))
                 .build();
         bankAccountMap.put(uuid2, bankAccount2);
+
     }
 
     public void upsertBankAccount(BankAccount bankAccount) {

@@ -2,6 +2,7 @@ server:
   port: 8035
 
 graphql:
+  extended-scalars: BigDecimal, Date
   tools:
     schema-location-pattern: "**/*.graphqls"
   playground:
@@ -14,5 +15,7 @@ graphql:
         variables: classpath:playground/bankAccountForId_variables.json
       - name: Create Zofia Ogórek
         query: classpath:playground/createZofiaOgorek.graphql
+  voyager:
+    enabled: true
 
 

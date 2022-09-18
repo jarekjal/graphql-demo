@@ -12,3 +12,8 @@ schema {
     query: Query
     mutation: Mutation
 }
+
+#The available scalars are the following: BigDecimal, BigInteger, Byte, Char, Date, DateTime, JSON,
+#LocalTime (since 13.0.0), Locale, Long, NegativeFloat, NegativeInt, NonNegativeFloat, NonNegativeInt,
+#NonPositiveFloat,NonPositiveInt, Object, PositiveFloat, PositiveInt, Short, Time, UUID (since 13.0.0), Url
+scalar Date
